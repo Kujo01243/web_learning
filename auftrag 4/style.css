@@ -1,0 +1,132 @@
+:root {
+    --left_space: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 435px 435px 420px 420px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header menu menu menu"
+      "content content pic pic"
+      "footer footer footer footer";
+    border-radius: 40px;
+    max-width: 1740px;
+    background-image: linear-gradient(45deg, rgba(31, 34, 44, 0.973) 25%,rgba(59, 99, 131, 0.712) 75%);
+  }
+  .item {
+    height: 80px;
+    color: white;
+  }
+  .item-logo {
+    grid-area: header;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+  }
+  .item-menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+  }
+  .item-menu > a {
+    color: white;
+    text-decoration: none;
+  }
+  .item-content {
+    grid-area: content;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .item-pic {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    grid-area: pic;
+    height: 500px;
+  }
+  .item-footer {
+    border-bottom-left-radius: 40px;
+    grid-area: footer;
+    display: flex;
+    justify-content: first baseline;
+    align-items: flex-end;
+  }
+  .grid-container {
+    margin: 40px;
+  }
+body {
+    background-color: rgb(52, 71, 87);
+    font-family: 'Roboto', sans-serif;
+}
+.item-logo > a {
+    grid-area: "header";
+    font-family: 'Vina Sans', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+#content-title_1 {
+    margin-top: 80px;
+    margin-bottom: 0px;
+}
+#content-title_2 {
+    margin-top: 0px;
+}
+.content-title {
+    font-size: 40px;
+    margin-left: var(--left_space);
+}
+#content-text_1 {
+    margin-left: var(--left_space);
+}
+#title-text {
+    margin-left: var(--left_space);
+    align-items: center;
+}
+#img_db {
+    height: 320px;
+    margin-right: 145px;
+}
+#copyright {
+    font-size: smaller;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#explorebutton {
+    margin-left: var(--left_space);
+}
+a.menu-item:hover {
+    border-bottom: 1px solid beige;
+    border-top: 1px solid rgba(5, 5, 5, 0);
+    text-decoration: none;
+    color: white;
+}
+.button {
+    background-image: linear-gradient(90deg, rgba(68, 42, 185, 0.9) 10%,rgba(108, 15, 145, 0.9) 40%);
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    height: 35px;
+    width: 100px;
+}
+.button:hover {
+    background-image: linear-gradient(90deg, rgb(68, 42, 185) 60%,rgb(108, 15, 145) 90%);
+}
+#rahmen {
+    background-color: rgba(128, 128, 128, 0.7);
+    display: flex;
+    margin: 20px;
+    border-radius: 40px;
+}
