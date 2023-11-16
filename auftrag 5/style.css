@@ -13,6 +13,8 @@
   border-radius: 2vw;
   background-image: linear-gradient(45deg, rgba(31, 34, 44, 0.973) 25%,rgba(59, 99, 131, 0.712) 75%);
   height: 80%;
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 .item {
   color: white;
@@ -56,9 +58,6 @@
   display: flex;
   justify-content: first baseline;
   align-items: flex-end;
-}
-.grid-container {
-  margin: 2vw;
 }
 body {
   background-color: rgb(52, 71, 87);
@@ -126,7 +125,7 @@ a.menu-item:hover {
 }
 #rahmen {
   background-color: rgba(128, 128, 128, 0.7);
-
+  padding: 2rem;
 
   border-radius: 2vw;
 }
@@ -215,7 +214,7 @@ a.menu-item:hover {
   margin-top: 2vw;
   visibility: hidden;
 }
-/* For desktop: */
+
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -224,17 +223,18 @@ a.menu-item:hover {
     font-size: 80%;
   }
   .grid-container {
-      display: grid;
-      grid-template-columns: 100vw;
+      grid-template-columns: auto;
+      grid-template-rows: auto 1fr auto auto;
       grid-template-areas: 
         "header "
         "pic "
         "content"
         "footer ";
         margin: 0vw;
+        min-height: 100vh;
   }
   .item-menu {
-      visibility: hidden;
+      display: none;
   }
   .hamburger_menu {
       visibility: visible;
@@ -253,13 +253,19 @@ a.menu-item:hover {
   #rahmen {
       background-color: rgba(1, 1, 1, 0);
       margin: 0vw;
+      padding: 0;
   }
   body {
       margin: 0vw;
+
   }
   #rahmen > p{
       margin-top: 0vw;
       display: flex;
       justify-content: flex-end;
   }
+  #sign_in {
+    margin-left: 1.5rem;
+  }
+
 }
