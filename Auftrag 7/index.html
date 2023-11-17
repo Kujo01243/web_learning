@@ -35,20 +35,35 @@
             <h1>Create Event</h1>
         </div>
         <div class="item-input item">
-            <div class="item-title item">
+            <div class="item-title item center">
                 <p class="title">Title*</p>
                 <input class="boxes" type="text" name="Title" maxlength="55">
             </div>
-            <div class="item-description item">
+            <div class="item-description item center">
                 <p class="title">Description*</p>
                 <textarea class="boxes" name="description" rows="6"></textarea>
 
             </div>
-            <div class="item-location item">Location</div>
-            <div class="item-address item">Address</div>
+            <div class="item-location item center">
+                <p class="title">Location</p>
+                <form action="#">
+                    <select class="dropdow boxes" name="location">
+                        <option value="zurich"></option>
+                        <option value="zurich">Zurich</option>
+                        <option value="zurich">auch Zurich</option>
+                        <option value="zurich">hciruZ</option>
+                        <option value="zurich">Zuerich</option>
+                        <option value="zurich">auch Zuerich</option>
+                        <option value="zurich">hcireuZ</option>
+                    </select>
+            </div>
+            <div class="item-address item center">
+                <p class="title">Address</p>
+                <input class="boxes" type="text" name="Address" maxlength="80">
+            </div>
             <div class="item-event-start item">Event Starts</div>
             <div class="item-event-end item">Event Ends</div>
-            <div class="item-add-images item">Add Images</div>
+            <div class="item-add-images item center">Add Images</div>
         </div>
         <div class="item-footer item">
             <div class="item-footer-left item">
