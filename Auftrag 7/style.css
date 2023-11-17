@@ -2,6 +2,7 @@
     --daycolor: rgb(248, 248, 248);
     --nightbackground: #323232;
     --nightborder: lightgrey;
+    --daygray: rgb(184, 181, 181);
 }
 
 html {
@@ -18,7 +19,6 @@ body {
 }
 .grid-container {
     display: grid;
-
     grid-template-rows: auto  auto auto auto 1fr auto;
     grid-template-areas: 
       "item-logo item-menu "
@@ -91,22 +91,23 @@ body {
     font-size: small;
 }
 a.footer-hover:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--daygray);
 }
 .socialmedia {
     max-width: 1rem;
     font-size: 0;
+    padding: 1px;
 }
 .button {
     background-color: var(--daycolor);
     border-radius: 8px;
     cursor: pointer;
-    height: 22px;
-    width: 70px;
-    border: 2px solid rgb(172, 17, 172);
+    height: auto;
+    width: auto;
+    border: 1px solid var(--daygray);
 }
 .button:hover {
-    background: rgb(172, 17, 172);
+    background: var(--daygray);
     color: white;
 }
 .item-title {
@@ -136,7 +137,7 @@ a.footer-hover:hover {
     width: 83vw;
     margin-bottom: 1rem;
     background-color: var(--daycolor);
-    border: 1px solid rgb(184, 181, 181);
+    border: 1px solid var(--daygray);
     border-radius: 3px;
 }
 .title {
@@ -149,13 +150,12 @@ a.footer-hover:hover {
 .date-time {
     margin-bottom: 1rem;
     background-color: var(--daycolor);
-    border: 1px solid rgb(184, 181, 181);
+    border: 1px solid var(--daygray);
     border-radius: 3px;
 }
 .dropdown {
     background-color: var(--daycolor);
-    color: black;
-    border: 1px solid rgb(184, 181, 181);
+    border: 1px solid var(--daygray);
     border-radius: 3px;
 }
 .nomargin {
@@ -166,10 +166,17 @@ a.footer-hover:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-
+#create {
+    font-size: large;
+}
+img.socialmedia:hover {
+    border-bottom: 1px solid var(--daygray);
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    padding-bottom: 4px;
+}
 @media (prefers-color-scheme: dark) {
+        /* For Darkmode: */
 	html {
 		background-color: var(--nightbackground);
 		color: #ccc;
@@ -206,4 +213,37 @@ a.footer-hover:hover {
     }
 
 
+}
+@media only screen and (min-width: 768px) {
+    /* For Desktop: */
+    .boxes {
+        width: 40vw;
+       }
+       .item-input {
+        grid-template-columns: 30vw 30vw 40vw;
+        grid-template-areas: 
+        "item-title item-title item-title"
+        "item-description item-description item-description"
+        "item-location item-location item-location"
+        "item-address item-address item-address"
+        "item-event-start item-event-end ."
+        "item-add-images item-add-images item-add-images";
+    }
+    .grid-container {
+        grid-template-areas: 
+          "item-logo item-menu "
+          "item-header ."
+          "item-input item-input"
+          "item-upload ."
+          ". ."
+          "item-footer item-footer";
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    .item-upload {
+        justify-content: flex-start;
+        margin-left: 7vw;
+        margin-top: 2vw;
+    
+    }
 }
