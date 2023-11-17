@@ -18,22 +18,21 @@ body {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: auto  auto auto 1fr auto;
+
+    grid-template-rows: auto  auto auto auto 1fr auto;
     grid-template-areas: 
       "item-logo item-menu "
       "item-header item-header"
       "item-input item-input"
+      "item-upload item-upload"
       ". ."
       "item-footer item-footer";
-    border: 1px solid hotpink;
     min-height: 100vh;
     box-sizing: border-box;
 }
 .item {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border: 1px solid hotpink;
 }
 .item-logo {
     grid-area: item-logo;
@@ -53,7 +52,7 @@ body {
 .item-input {
     grid-area: item-input;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 54vw 45.5vw;
     grid-template-areas: 
     "item-title item-title"
     "item-description item-description"
@@ -72,6 +71,7 @@ body {
     "item-footer-left . item-footer-right ";
 }
 .item-footer-left {
+    padding: 0;
     grid-area: item-footer-left;
     display: flex;
     justify-content: space-around;
@@ -82,14 +82,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-right: 10vw;
 }
 .item-footer-left > a {
     text-decoration: none;
     color: black;
+    font-size: small;
+}
+a.footer-hover:hover {
+    border-bottom: 1px solid black;
 }
 .socialmedia {
     max-width: 1rem;
+    font-size: 0;
 }
 .button {
     background-color: var(--daycolor);
@@ -127,7 +133,7 @@ body {
 .boxes {
     margin-left: 0;
     margin-right: 0;
-    width: 80vw;
+    width: 83vw;
     margin-bottom: 1rem;
     background-color: var(--daycolor);
     border: 1px solid rgb(184, 181, 181);
@@ -135,10 +141,32 @@ body {
 }
 .title {
     margin-bottom: 0;
-    margin-top: 1rem;
+    margin-top: 0;
 }
 .center {
-    padding-left: 10vw;
+    padding-left: 7vw;
+}
+.date-time {
+    margin-bottom: 1rem;
+    background-color: var(--daycolor);
+    border: 1px solid rgb(184, 181, 181);
+    border-radius: 3px;
+}
+.dropdown {
+    background-color: var(--daycolor);
+    color: black;
+    border: 1px solid rgb(184, 181, 181);
+    border-radius: 3px;
+}
+.nomargin {
+    margin: 0;
+}
+.item-upload {
+    grid-area: item-upload;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -157,7 +185,7 @@ body {
         color: var(--nightbackground);
     }
     .item-footer {
-        background-color: rgb(219, 213, 213);
+        background-color: var(--daycolor);
         border-end-end-radius: 1rem;
         border-end-start-radius: 1rem;
     }
@@ -171,5 +199,11 @@ body {
         color: white;
         border: 1px solid var(--nightborder);
     }
+    .date-time {
+        background-color: var(--nightbackground);
+        border: 1px solid var(--nightborder);
+        color: white;
+    }
+
 
 }

@@ -14,7 +14,7 @@
 
 <body>
     <div class="grid-container">
-        <div class="item-logo item">Events in India
+        <div class="item-logo item center">Events in India
         </div>
         <div class="item-menu item">
             <form action="#">
@@ -32,7 +32,7 @@
             </form>
         </div>
         <div class="item-header item">
-            <h1>Create Event</h1>
+            <h1 class="nomargin">Create Event</h1>
         </div>
         <div class="item-input item">
             <div class="item-title item center">
@@ -61,21 +61,35 @@
                 <p class="title">Address</p>
                 <input class="boxes" type="text" name="Address" maxlength="80">
             </div>
-            <div class="item-event-start item">Event Starts</div>
-            <div class="item-event-end item">Event Ends</div>
-            <div class="item-add-images item center">Add Images</div>
+            <div class="item-event-start item center">
+                <p class="title">Event Starts:</p>
+                <input class="date-time nomargin" type="date"><br>
+                <input class="date-time" type="time">
+            </div>
+            <div class="item-event-end item">
+                <p class="title">Event Ends:</p>
+                <input class="date-time nomargin" type="date"><br>
+                <input class="date-time" type="time">
+            </div>
+            <div class="item-add-images item center">
+                <p class="title">Add Images*</p>
+                <input type="file" >
+            </div>
         </div>
         <div class="item-footer item">
             <div class="item-footer-left item">
-                <a href="#">About</a>
-                <a href="#">Contact</a> 
+                <a href="#" class="footer-hover">About</a>
+                <a href="#" class="footer-hover">Contact</a> 
             </div>
             <div class="item-footer-right item">
-                <img class="socialmedia" src="./pics/facebook.png" alt="facebook">
-                <img class="socialmedia" src="./pics/twitter.png" alt="Twitter">
-                <img class="socialmedia" src="./pics/linkedin.png" alt="Linkedin">
-                <img class="socialmedia" src="./pics/instagram.png" alt="Instagram">
+                <a class="socialmedia" href="https://facebook.com"><img class="socialmedia" src="./pics/facebook.png" alt="facebook"></a>
+                <a class="socialmedia" href="https://x.com"><img class="socialmedia" src="./pics/twitter.png" alt="Twitter"></a>
+                <a class="socialmedia" href="https://linkedin.com"><img class="socialmedia" src="./pics/linkedin.png" alt="Linkedin"></a>
+                <a class="socialmedia" href="https://instagram.com"><img class="socialmedia" src="./pics/instagram.png" alt="Instagram"></a>
             </div>
+        </div>
+        <div class="item-upload item">
+            <button class="button">Create</button>
         </div>
     </div>
 </body>
