@@ -4,24 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formular</title>
+    <title>Formular Auftr. 7</title>
     <link rel="icon" type="image/x-icon" href="./pics/list.png">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="item-logo item">item logo
+        <div class="item-logo item">Events in India
         </div>
-        <div class="item-menu item">item-menu
+        <div class="item-menu item">
+            <form action="#">
+                <select name="location">
+                    <option value="Location">Location</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">nobody wants France</option>
+                    <option value="italy">Italy</option>
+                </select>
+            </form>
+            <form action="https://calendar.google.com" target="_blank">
+                <button class="button">sign in</button>
+                <input type="hidden" name="bookmark" value="lyrics" />
+            </form>
         </div>
-        <div class="item-header item">item-header
+        <div class="item-header item">
+            <h1>Create Event</h1>
         </div>
-        <div class="item-profile item">item-profile
+        <div class="item-input item">item-input
         </div>
-        <div class="item-password item">item-passowrd
-        </div>
-        <div class="item-footer item">item-footer
+        <div class="item-footer item">
+            <div class="item-footer-left item">
+                <a href="#">About</a>
+                <a href="#">Contact</a> 
+            </div>
+            <div class="item-footer-right item">
+                <img class="socialmedia" src="./pics/facebook.png" alt="facebook">
+                <img class="socialmedia" src="./pics/twitter.png" alt="Twitter">
+                <img class="socialmedia" src="./pics/linkedin.png" alt="Linkedin">
+                <img class="socialmedia" src="./pics/instagram.png" alt="Instagram">
+            </div>
         </div>
     </div>
 </body>
