@@ -18,7 +18,7 @@
         </div>
         <div class="item-menu item">
             <form action="#">
-                <select name="location">
+                <select class="dropdown" name="location">
                     <option value="Location">Location</option>
                     <option value="Switzerland">Switzerland</option>
                     <option value="Germany">Germany</option>
@@ -34,7 +34,21 @@
         <div class="item-header item">
             <h1>Create Event</h1>
         </div>
-        <div class="item-input item">item-input
+        <div class="item-input item">
+            <div class="item-title item">
+                <p class="title">Title*</p>
+                <input class="boxes" type="text" name="Title" maxlength="55">
+            </div>
+            <div class="item-description item">
+                <p class="title">Description*</p>
+                <textarea class="boxes" name="description" rows="6"></textarea>
+
+            </div>
+            <div class="item-location item">Location</div>
+            <div class="item-address item">Address</div>
+            <div class="item-event-start item">Event Starts</div>
+            <div class="item-event-end item">Event Ends</div>
+            <div class="item-add-images item">Add Images</div>
         </div>
         <div class="item-footer item">
             <div class="item-footer-left item">
