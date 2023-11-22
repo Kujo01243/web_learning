@@ -223,7 +223,7 @@ img.socialmedia:hover {
         width: 40vw;
        }
        .item-input {
-        grid-template-columns: 30vw 30vw 40vw;
+        grid-template-columns: 0fr 1fr 40vw;
         grid-template-areas: 
         "item-title item-title item-title"
         "item-description item-description item-description"
@@ -231,6 +231,9 @@ img.socialmedia:hover {
         "item-address item-address item-address"
         "item-event-start item-event-end ."
         "item-add-images item-add-images item-add-images";
+    }
+    .item-event-end {
+        padding-left: 5rem;
     }
     .grid-container {
         grid-template-areas: 
