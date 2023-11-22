@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     margin: 0;
+    background-color: var(--daycolor);
 }
 .grid-container {
     display: grid;
@@ -96,7 +97,9 @@ a.footer-hover:hover {
 .socialmedia {
     max-width: 1rem;
     font-size: 0;
-    padding: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    border-top: 1px solid rgba(0, 0, 0, 0);
+    padding-bottom: 4px;
 }
 .button {
     background-color: var(--daycolor);
@@ -177,7 +180,7 @@ img.socialmedia:hover {
 }
 @media (prefers-color-scheme: dark) {
         /* For Darkmode: */
-	html {
+	body {
 		background-color: var(--nightbackground);
 		color: #ccc;
 	}
