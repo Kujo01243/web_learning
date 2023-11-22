@@ -40,8 +40,8 @@ body {
 .item-menu {
     grid-area: item-menu;
     display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    padding-right: 9vw;
     align-items: center;
 }
 .item-header {
@@ -213,6 +213,9 @@ img.socialmedia:hover {
     }
 
 
+}
+#sign-in {
+    margin-left: 5vw;
 }
 @media only screen and (min-width: 768px) {
     /* For Desktop: */
