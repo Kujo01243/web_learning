@@ -224,7 +224,7 @@ img.socialmedia:hover {
 @media only screen and (min-width: 768px) {
     /* For Desktop: */
     .boxes {
-        width: 40vw;
+        width: 30rem;
        }
        .item-input {
         grid-template-columns: 0fr 1fr 40vw;
@@ -253,7 +253,10 @@ img.socialmedia:hover {
     .item-upload {
         justify-content: flex-start;
         margin-left: 7vw;
-        margin-top: 2vw;
-    
+        margin-top: 1rem;
+    }
+    .item-header {
+        justify-content: left;
+        padding-left: 7vw;
     }
 }
