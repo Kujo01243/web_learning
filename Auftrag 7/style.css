@@ -70,6 +70,7 @@ body {
     grid-template-columns: 40vw auto 40vw;
     grid-template-areas: 
     "item-footer-left . item-footer-right ";
+    padding: 0;
 }
 .item-footer-left {
     padding: 0;
@@ -92,14 +93,16 @@ body {
     font-size: small;
 }
 a.footer-hover:hover {
-    border-bottom: 1px solid var(--daygray);
+    border-bottom: 2px solid var(--daygray);
+    border-top: 2px solid rgba(0, 0, 0, 0);
 }
 .socialmedia {
     max-width: 1rem;
     font-size: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-    border-top: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-top: 2px solid rgba(0, 0, 0, 0);
     padding-bottom: 4px;
+    padding-top: 4px;
 }
 .button {
     background-color: var(--daycolor);
@@ -174,9 +177,7 @@ a.footer-hover:hover {
     font-size: large;
 }
 img.socialmedia:hover {
-    border-bottom: 1px solid var(--daygray);
-    border-top: 1px solid rgba(0, 0, 0, 0);
-    padding-bottom: 4px;
+    border-bottom: 2px solid var(--daygray);
 }
 @media (prefers-color-scheme: dark) {
         /* For Darkmode: */
